@@ -47,7 +47,7 @@
     text-align: center;
 }
 
-.dsmeta-sales-table tbody tr {
+.dsmeta-sales-table tbody td {
     height: 74px;
     border-top: 1px solid #5F6E82;
 }
