@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import NotificationButton from '../NotificationButton';
@@ -12,6 +12,10 @@ function SalesCard() {
 
     const [minDate, setMinDate] = useState(min);
     const [maxDate, setMaxDate] = useState(max);
+
+    useEffect(() => {
+        console.log("TESTE");
+    }, []);
 
     return (
 
@@ -51,21 +55,18 @@ function SalesCard() {
                     </thead>
                     <tbody>
                         <tr>
-                            <div>
-                                <div>
-                                    <td className="show992">#341</td>
-                                    <td className="show576">08/07/2022</td>
-                                    <td>Anakin</td>
-                                    <td className="show992">15</td>
-                                    <td className="show992">11</td>
-                                    <td>R$ 55300.00</td>
-                                    <td>
-                                        <div className="dsmeta-red-btn-container">
-                                            <NotificationButton />
-                                        </div>
-                                    </td>
+                            <td className="show992">#341</td>
+                            <td className="show576">08/07/2022</td>
+                            <td>Anakin</td>
+                            <td className="show992">15</td>
+                            <td className="show992">11</td>
+                            <td>R$ 55300.00</td>
+
+                            <td>
+                                <div className="dsmeta-red-btn-container">
+                                    <NotificationButton />
                                 </div>
-                            </div>
+                            </td>
                         </tr>
                         <tr>
                             <td className="show992">#341</td>
