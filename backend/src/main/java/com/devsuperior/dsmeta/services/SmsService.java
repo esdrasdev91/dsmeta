@@ -46,4 +46,5 @@ public class SmsService {
 
 		System.out.println(message.getSid());
 	}
+/*Correcao nas variáveis Run config */
 }
