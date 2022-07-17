@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -14,7 +15,11 @@ function SalesCard() {
     const [maxDate, setMaxDate] = useState(max);
 
     useEffect(() => {
-        console.log("TESTE");
+        axios.get("http://localhost:8080/sales")
+            .then(Response => {
+                console.log(Response.data);
+            });
+
     }, []);
 
     return (
